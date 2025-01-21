@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Error</title>
+</head>
+<body>
+  <p>This is a paragraph.</p>
+  <p>This is another paragraph.</p>
+  <div id="myDiv"></div>
+  <script>
+    //The error is here in accessing the non-existent element
+    document.getElementById("myDiv").innerHTML = "<p>This is some added content.</p>";
+    //Another error is here
+    document.getElementByid("myDiv").style.color = "blue"; 
+    //Correct way to access element
+    document.getElementById("myDiv").style.color = "red";
+  </script>
+</body>
+</html>
